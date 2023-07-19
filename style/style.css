@@ -1,2 +1,200 @@
-body{
+
+
+@keyframes bgColor {
+    12.5% {
+      background-color: #c21313;
+    }
+    25% {
+      background-color: #b87f15;
+    }
+    37.5% {
+      background-color: #cfb315;
+    }
+    50% {
+      background-color: #63b611;
+    }
+    62.5% {
+      background-color: #00b9b9;
+    }
+    75% {
+      background-color: #0000FF;
+    }
+    87.5% {
+      background-color: #9932CC;
+    }
+    100% {
+      background-color: #FF1493;
+    }
+  }
+
+  html {
+    width: 100vw;
+    height: 100vh; 
+  }
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(152, 207, 255);
 }
+
+main {
+/* background-color: red; */
+display:flex;
+flex-direction: column;
+position:absolute;
+width:80vw;
+height:80vh;
+padding: 2.5vh 2.5vw 2.5vh 2.5vw;
+margin: 5vh 5vw 5vh 5vw;
+background-color: rgba(200,200,200,0.5);
+backdrop-filter: blur(15px);
+border-radius: 15px;
+border-style: solid;
+border-width: 0.25px;
+border-color:rgba(200,200,200,0.25);
+background-clip: padding-box;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    flex-direction: row;
+    row-gap: 1000px;
+    margin: 2.5vh 0vw 2.5vh 0vw;
+    /* background-color: red; */
+    height:0;
+}
+.bc {
+/* flex:1; */
+  height:50vh;
+
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 0.25px;
+    border-color:rgba(200,200,200,0.45);
+    background-color: rgba(200,200,200,0.35);
+    background-clip: padding-box;
+    transition: box-shadow .3s;
+    box-shadow: 0 0 15px rgba(44,44,44,.2); 
+    margin: 0vh 2.5vw 0vh 2.5vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bc:hover{
+    box-shadow: 0 0 25px rgba(33,33,33,.5); 
+    cursor: pointer;
+}
+
+.bc_card {
+  overflow: hidden;
+background-color: red;
+width:100%;
+height:35vh;
+border-radius: 15px 15px 0% 0%;
+top:0px;
+left:0px;
+right:0px;
+bottom:0px;
+
+}
+
+
+.bc_img{
+  transition: 0.75s;
+    object-fit: cover;
+    width:100%;
+    height: 100%;
+    border-radius: 15px 15px 0% 0%;
+}
+
+.bc:hover .bc_img {
+  transform: scale(1.5);
+  filter: blur(5px);
+}
+
+h1 {
+    font-family: 'unisans_h', sans-serif;
+    font-size:  calc(3vw + 1em);
+    color:#141414;
+    margin:0;
+}
+
+
+h2{
+  font-family: 'unisans_hi', sans-serif;
+  font-size:  calc(2vw + 1em);
+  color:#141414;
+  margin:0;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+
+p {
+    font-family: 'unisans_t', sans-serif;
+    font-size:  calc(1vw + 1em);
+    color:#141414;
+    margin:0;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+p1 {
+    font-family: 'unisans_ti', sans-serif;
+    font-size:  calc(0.25vw + 1em);
+    color:#141414;
+    margin:0;  
+}
+
+html, body, #container{
+    width: 100%;
+    height: 100%;
+    min-width: 500px;
+    min-height: 500px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  #container{
+    /* display:flex; */
+    /* justify-content: center; */
+    background-color: #007ced;
+      /* background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%); */
+      animation: bgColor 35s infinite linear;
+  }
+  #cloud-intro{
+    position: relative;
+    height: 100%;
+    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+                url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+                url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+      animation: wind 20s linear infinite;
+  }
+  @keyframes wind{
+    0% {
+      background-position: 0 200px, 0 300px, 100px 250px;
+    }
+    100% {
+      background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+    }
+  
+  }

@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'NewRodin_N';
+    src: url('./font/NewRodin\ Pro\ UB.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'unisans_hi';
+    src: url('./font/Uni\ Sans\ Heavy\ Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'unisans_h';
+    src: url('./font/Uni\ Sans\ Heavy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'unisans_ti';
+    src: url('./font/Uni\ Sans\ Thin\ Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'unisans_t';
+    src: url('./font/Uni\ Sans\ Thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
