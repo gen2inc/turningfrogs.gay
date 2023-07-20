@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,7 +35,14 @@
           
         </div>
         <h2>Mc Server</h2>
-        <p style="color:red">Not Online</p>
+        <?php
+            try {
+	              require_once('./lib/MinecraftServer.php');
+	              $server = new MinecraftServer('hypixel.net');
+            } catch (Exception $e) {
+                echo "Error";
+            }
+        ?>
         </div>
       </div> 
     </main>
