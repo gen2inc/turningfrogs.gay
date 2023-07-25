@@ -7,7 +7,6 @@ async function connect() {
     if (connection === "FAIL") {
         document.getElementById("mc-status").innerHTML = "Error - Check console"
     } else if (connection.status === "success") {
-        console.log('test')
         document.getElementById("mc-status").style.color = "green";
         document.getElementById("mc-status").innerHTML = `Online - ${connection.players.now}/${connection.players.max} - ${connection.server.name}`
     }
