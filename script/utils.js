@@ -34,7 +34,7 @@ export function fallbackCopy(text) {
 }
 export function copyText(text) {
     if (!navigator.clipboard) {
-      fallbackCopyTextToClipboard(text);
+      fallbackCopy(text);
       return;
     }
     navigator.clipboard.writeText(text).then(function() {
