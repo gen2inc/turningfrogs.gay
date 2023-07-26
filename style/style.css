@@ -1,4 +1,6 @@
-
+*{
+  transition: 0.35s;
+}
 
 @keyframes bgColor {
     0% {
@@ -76,41 +78,41 @@ background-clip: padding-box;
     /* background-color: red; */
     height:0;
 }
-.bc {
-/* flex:1; */
-  height:50vh;
-
-    border-radius: 15px;
-    border-style: solid;
-    border-width: 0.25px;
-    border-color:rgba(200,200,200,0.45);
-    background-color: rgba(200,200,200,0.35);
-    background-clip: padding-box;
-    transition: box-shadow .3s;
-    box-shadow: 0 0 15px rgba(44,44,44,.2); 
-    margin: 0vh 2.5vw 0vh 2.5vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+  .bc {
+    /* flex:1; */
+      height:50vh;
+    
+        border-radius: 15px;
+        border-style: solid;
+        border-width: 0.25px;
+        border-color:rgba(200,200,200,0.45);
+        background-color: rgba(200,200,200,0.35);
+        background-clip: padding-box;
+        transition: box-shadow .3s;
+        box-shadow: 0 0 15px rgba(44,44,44,.2); 
+        margin: 0vh 2.5vw 0vh 2.5vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
 .bc:hover{
     box-shadow: 0 0 25px rgba(33,33,33,.5); 
     cursor: pointer;
 }
 
-.bc_card {
-  overflow: hidden;
-background-color: red;
-width:100%;
-height:35vh;
-border-radius: 15px 15px 0% 0%;
-top:0px;
-left:0px;
-right:0px;
-bottom:0px;
-
-}
+    .bc_card {
+      overflow: hidden;
+    background-color: red;
+    width:100%;
+    height:35vh;
+    border-radius: 15px 15px 0% 0%;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    
+    }
 
 
 .bc_img{
@@ -205,4 +207,12 @@ html, body, #container{
   -webkit-user-select: text !important;
   -ms-user-select: text !important;
   user-select: text !important; 
+  font-size:  calc(1.35vw + 0.45em);
+  font-family: 'unisans_h', sans-serif;
 }
+
+#click-info {
+  font-family: 'unisans_ti', sans-serif;
+  font-size:  calc(0.9vw + 0.3em);
+}
+
