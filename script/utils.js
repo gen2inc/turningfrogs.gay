@@ -32,6 +32,7 @@ export function fallbackCopy(text) {
   
     document.body.removeChild(textArea);
 }
+
 export function copyText(text) {
     if (!navigator.clipboard) {
       fallbackCopy(text);
