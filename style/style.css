@@ -1,5 +1,5 @@
 *{
-  transition: 0.35s;
+  /* transition: 0.35s; */
 }
 
 @keyframes bgColor {
@@ -42,21 +42,24 @@ body {
 }
 
 main {
-/* background-color: red; */
-display:flex;
-flex-direction: column;
-position:absolute;
-width:80vw;
-height:80vh;
-padding: 2.5vh 2.5vw 2.5vh 2.5vw;
-margin: 5vh 5vw 5vh 5vw;
-background-color: rgba(200,200,200,0.5);
-backdrop-filter: blur(15px);
-border-radius: 15px;
-border-style: solid;
-border-width: 0.25px;
-border-color:rgba(200,200,200,0.25);
-background-clip: padding-box;
+  /* background-color: red;*/
+  height: fit-content;
+  display:flex;
+  flex-direction:column;
+  position:absolute;
+  top:10%;
+  right:50%;
+  width: 80vw;
+  transform:translate(50%);
+  padding: 2.5vh 2.5vw 2.5vh 2.5vw;
+  /* margin: 5vh 5vw 5vh 5vw; */
+  background-color: rgba(200,200,200,0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 0.25px;
+  border-color:rgba(200,200,200,0.25);
+  background-clip: padding-box;
 }
 
 #title {
@@ -68,15 +71,14 @@ background-clip: padding-box;
 
 #content {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: stretch;
-    flex-direction: row;
-    row-gap: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 75vw),1fr));
+    column-gap: 10vh;
     margin: 2.5vh 0vw 2.5vh 0vw;
     /* background-color: red; */
     height:0;
+    grid-row-gap: 4vh;
+    grid-column-gap: 1vw;
 }
   .bc {
     /* flex:1; */
@@ -169,18 +171,19 @@ p1 {
 html, body, #container{
     width: 100%;
     height: 100%;
-    min-width: 500px;
-    min-height: 500px;
+    position: absolute;
+    /* min-width: 500px; */
+    /* min-height: 500px; */
     margin: 0;
     padding: 0;
-    overflow: hidden;
   }
   #container{
     /* display:flex; */
     /* justify-content: center; */
     background-color: #007ced;
-      /* background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%); */
-      animation: bgColor 35s infinite linear;
+    /* background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%); */
+    animation: bgColor 35s infinite linear;
+    position: fixed;
   }
   #cloud-intro{
     position: relative;
@@ -215,4 +218,5 @@ html, body, #container{
   font-family: 'unisans_ti', sans-serif;
   font-size:  calc(0.9vw + 0.3em);
 }
+
 
