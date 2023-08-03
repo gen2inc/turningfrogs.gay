@@ -1,6 +1,8 @@
+/* 
 *{
-  /* transition: 0.35s; */
-}
+  transition: 0.35s;
+} 
+*/
 
 @keyframes bgColor {
     0% {
@@ -216,7 +218,17 @@ html, body, #container{
 
 #click-info {
   font-family: 'unisans_ti', sans-serif;
+  color: white;
   font-size:  calc(0.9vw + 0.3em);
 }
 
+
+/* 
+make the text more readable on mobile devices
+*/
+@media (max-width: 767px) {
+  #click-info {
+    font-size:  calc(1.0vw + 0.55em);
+  }
+}
 
